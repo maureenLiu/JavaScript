@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<img src="./1.jpg" alt="" id="box">
+    <div class="cur" id="ha">我是一个粉刷匠</div>
+</body>
+</html>
+<script>
+    //获取img标签
+    var img = document.getElementById("box");
+    //获取标签属性值
+    console.log(img.src);
+    //重新修改图片src属性值
+    img.src = "./xz.jpg";
+    //获取div标签
+    var div = document.getElementById("ha");
+    //获取div的class、id属性值
+    console.log(div.id);
+    console.log(div.className);
+    //从新设置class属性值
+    div.className = "rewrite";
+    div.id = "gagaga";
+    //修改文本
+    div.innerHTML = "粉霜本领强";
+</script>

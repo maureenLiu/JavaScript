@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	 <div>我是中国人我很自豪</div>
+</body>
+</html>
+<script>
+    var f = 16;
+    //JQ对于元素绑定事件都封装成函数
+    $("div").click(function () {
+        f++;
+        //修改div的字号大小
+        $(this).css({
+            "fontSize": f
+        })
+    });
+</script>

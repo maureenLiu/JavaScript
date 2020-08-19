@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	<!-- return后面的语句不再执行 -->
+	function mul() { 
+        console.log(123);
+        console.log(456);
+        return;
+        console.log(789);
+    }
+    mul(); //输出结果123和456
+</script>
+<script type="text/javascript">
+	<!-- return将函数体中计算完的结果返回 -->
+	function mul(a, b) {
+        return a * b;
+    }
+    var result = mul(6, 7);
+    console.log(result); //输出结果42
+</script>

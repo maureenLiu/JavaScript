@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	   <!-- 引包 -->
+    <script src="../lib/jquery-3.4.1.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            /* 定位元素才有left|top|bottom|right */
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+	<div>中国</div>
+</body>
+</html>
+<script>
+	<!-- 让div标签向右移动 -->
+    $("div").animate({
+        "left": 1000,
+        "top": 100,
+        "width": 150,
+        "height": 50,
+        "background": "cyan",//颜色不能参与动画
+        "color": "white",//颜色不能参与动画
+        "border": "20px solid red"
+    }, 5000, function () { //回调函数在动画结束的时候会执行
+        //让div变椭圆
+        $(this).css({
+            "borderRadius": "50%",
+            "textAlign": "center"
+        })
+    });
+</script>

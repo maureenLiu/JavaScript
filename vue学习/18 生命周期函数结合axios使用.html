@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>拉取服务器数据</title>
+	<script src="./lib/vue.min.js"></script>
+	<script src="./lib/axios.js"></script>
+</head>
+<body>
+	<!-- 本程序运行在服务器上 -->
+	<div id="app">
+		<ul>
+			<li v-for="item in postList">{{item.name}}</li>
+		</ul>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 创建Vue实例 -->
+	var vm = new Vue({
+		// 挂载点
+		el:"#app",
+		data: {
+			postList:[]
+		},
+		// 生命周期函数:实例已经和模板挂载完毕
+		mounted() {
+			// 向服务器拉取数据
+			axios.get("./recruitforbaidu.txt").then(obj=>{
+				// console.log(obj.data.postList);
+				// 修改实例的postList属性值
+				this.postList = obj.data.postList;
+			})
+		}
+	})
+</script>

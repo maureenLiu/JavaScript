@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 5、函数作为狭义对象方法执行：谁最后打点函数的上下文即为谁 -->
+	// 狭义对象
+	var jch = {
+       name:"贾成豪",
+       age:18,
+       sex:"男",
+       eat:function(){
+           console.log(this.name+"我可以吃八级米饭");//this就是jch这对象
+       }
+    }
+	//调用对象方法
+	jch.eat(); 
+</script>

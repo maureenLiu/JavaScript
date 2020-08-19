@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+	<!-- 3、定时器回调函数执行：定时器回调函数上下文为window -->
+  //定时器回调函数每隔一段事件执行一次
+  //第一个参数：函数（称之为回调函数）
+  //第二个参数：是一个数字（代表的是定时器间隔）单位MS
+  setInterval(function(){
+      console.log(this);
+  },1500);
+</script>

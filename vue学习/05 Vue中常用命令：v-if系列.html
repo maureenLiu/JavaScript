@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="./lib/vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+        <h1>你的性别是什么呀?</h1>
+        <ul>
+            <li v-if="'男'==sex">男</li>
+            <li v-else-if="'女'==sex">女</li>
+            <li v-else>未知</li>
+        </ul>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			sex:"男"
+		}
+	});
+</script>

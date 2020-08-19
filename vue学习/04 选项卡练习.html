@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="./lib/vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+        <button @click="add('军事')">军事</button>
+        <button @click="add('新闻')">新闻</button>
+        <button @click="add('直播')">直播</button>
+        <ul v-show="'军事'==info">
+            <li>军事军事</li>
+            <li>军事军事</li>
+            <li>军事军事</li>
+            <li>军事军事</li>
+            <li>军事军事</li>
+            <li>军事军事</li>
+            <li>军事军事</li>
+            <li>军事军事</li>
+            <li>军事军事</li>
+            <li>军事军事</li>
+        </ul>
+        <ul v-show="'新闻'==info">
+            <li>新闻新闻</li>
+            <li>新闻新闻</li>
+            <li>新闻新闻</li>
+            <li>新闻新闻</li>
+            <li>新闻新闻</li>
+            <li>新闻新闻</li>
+            <li>新闻新闻</li>
+            <li>新闻新闻</li>
+            <li>新闻新闻</li>
+            <li>新闻新闻</li>
+        </ul>
+        <ul v-show="'直播'==info">
+            <li>直播直播</li>
+            <li>直播直播</li>
+            <li>直播直播</li>
+            <li>直播直播</li>
+            <li>直播直播</li>
+            <li>直播直播</li>
+            <li>直播直播</li>
+            <li>直播直播</li>
+            <li>直播直播</li>
+            <li>直播直播</li>
+        </ul>
+    </div>
+
+</body>
+</html>
+<script type="text/javascript">
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			info:"军事"
+		},
+		// 书写标签事件处理函数的地方
+		methods: {
+			// 事件处理函数add
+			add(a){
+				// 修改vue实例属性值即可
+				this.info = a;
+			}
+		}	
+	})
+</script>

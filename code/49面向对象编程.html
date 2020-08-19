@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>面向对象编程</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 狭义对象：JS当中狭义对象用一个大花括号{}表示 -->
+	var obj = {
+		name:"小明",
+		age:18,
+		sex:"男",
+		eat:function() {
+			console.log("我很棒！");
+		}
+	};
+	// 检测当前对象类型
+	console.log(typeof obj);//object
+	// 获取属性值
+	console.log(obj.name);
+	console.log(obj.age);
+	console.log(obj.sex);
+	console.log(obj.eat);
+	//重新修改属性值
+	 obj.name = "二哈";
+	 obj.age = 2;
+	 obj.sex = "公";
+	 //动态添加属性、方法
+	 obj.color = "白加黑";
+	 obj.yaoren = function(){
+	      console.log("我可以咬人");
+	 }
+	 // 调用函数
+	 obj.eat();
+	 obj.yaoren();
+</script>
+<script type="text/javascript">
+	<!-- 广义对象 -->
+	<!-- 广义对象：函数-->
+	function people(a,b,c) {
+
+	}
+	// JS中，五个基本数据类型：数字、字符串、布尔、未定义和空对象
+	// 引用类型数据：object
+	console.log(typeof people);//结果是function
+	// 函数即为广义对象，因为有一些系统内置属性、方法提供使用
+	// name:系统提供的内置属性，可以获取函数名称
+	console.log(people.name);//结果为people
+	// length：系统提供的内置属性，可以获取函数形参个数
+	console.log(people.length);
+	// 动态添加自定义属性
+	people.xingming = "我是小明";
+	people.age = 18;
+	people.sex = "男";
+	console.log(people.xingming);
+
+	<!-- 广义对象：数组-->
+	var arr = ["吃饭", "睡觉", "打豆豆"];
+	console.log(typeof arr);//object
+	// 以下是数组内置的属性和方法
+	console.log(arr.length);
+	console.log(arr.reverse());
+	console.log(arr.join());
+	// 为数组动态添加属性和方法
+	arr.xingming = "小红";
+	console.log(arr.xingming);//小红
+</script>
+<script type="text/javascript">
+	<!-- 不是对象 -->
+	//JS当用基本数据类型数值都不是对象【数字、字符串、布尔值、未定义、空对象】
+	var num = 100;
+    num.xingming ="我爱你";//不能动态添加属性
+    console.log(num.xingming);//undefined
+    var str = "今天是个好日子";
+    str.xingming = "毛爷爷";
+    console.log(str.xingming);//undefined
+    //NaN不是数据类型，它只是Number（数字类型)中的一个特殊值
+    console.log(5);
+    console.log(NaN);
+    console.log(typeof 5);
+    console.log(typeof NaN);
+    //在那些特定情况下回出现这个特殊值NaN【在进行数学运算符且算不出结果的时候返回数字NaN】
+    console.log(0/0);
+</script>

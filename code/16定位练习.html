@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			position: relative;
+			width: 600px;
+			height: 400px;
+			background: red;
+			border: 1px solid black;
+			left: 200px;
+		}
+		/*绝对定位参照父元素*/
+		.cur{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 300px;
+			height: 400px;
+			background: cyan;
+		}
+		.cur1{
+			position: absolute;
+			left: 300px;
+			top: 0px;
+			width: 300px;
+			height: 200px;
+			background: purple;
+		}
+		.cur2{
+			position: absolute;
+			left: 300px;
+			top: 200px;
+			width: 300px;
+			height: 200px;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="cur"></div>
+		<div class="cur1"></div>
+		<div class="cur2"></div>
+	</div>
+
+</body>
+</html>

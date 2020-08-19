@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 布尔值参与逻辑运算 -->
+	<!-- 逻辑运算符:逻辑与 -->
+	console.log(true && false); //false
+    console.log(false && true); //false
+    console.log(false && false); //false
+    console.log(true && true); //true
+	<!-- 逻辑运算符:逻辑或 -->
+	console.log(true || false); //true
+    console.log(true || true); //true
+    console.log(false || true); //true
+    console.log(false || false); //false 
+	<!-- 逻辑运算符:逻辑非-->
+	console.log(!true); //false
+    console.log(!false); //true
+    console.log(!!!true); //false
+</script> 
+<script>
+    //其他类型数据参与逻辑运算
+    // 数字类型---隐式转换为布尔值
+    console.log(Boolean(0)); //false
+    console.log(Boolean(NaN)); //false
+    console.log(Boolean(-3.14)); //true
+    console.log(Boolean(100)); //true
+
+    // 字符串--隐式转换为布尔值
+    console.log(Boolean("")); //false
+    console.log(Boolean("abc"));//true
+
+    // 未定义类型和空对象
+    console.log(Boolean(undefined)); //false
+    console.log(Boolean(null));//false
+
+    //逻辑与：A为真，结果看B；A为假，结果看A
+    console.log(1 && 0);  //0
+    console.log(66666 && 999999); //999999
+    console.log(NaN && 34);  //NaN
+    console.log("张三" && "李四");  //李四
+
+    //逻辑或：A为真，结果看A；A为假，结果看B
+    console.log("小明" || "小花花"); //小明
+    console.log(NaN || 123);  //123
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS样式学习</title>
+	<!-- 样式一般是需要放在style标签里 -->
+	<style type="text/css">
+		h1{
+			/*文字颜色设置:属性值包括红、橙、黄、绿、青、蓝、紫等*/
+			color:red;
+			/*字体大小设置:最小12px*/
+			font-size: 16px;
+			/*背景颜色设置*/
+			background-color:orange;
+			/*文本对齐方式:默认是靠左对齐*/
+			text-align: center;
+			/*字体样式设置：倾斜*/
+			font-style: italic;
+		}
+		div {
+			background-color: red;
+			font-size: 28px;
+			color: green;
+			text-align: center;
+			font-style: italic;
+			/*透明度设置：透明度属性值范围0~1，0表示纯透明*/
+			opacity: 1;
+			/*光标放置标签中：变为小手*/
+			cursor:pointer;
+		}
+		span{
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>我是一级标题</h1>
+	<h1>我是小明呀</h1>
+	<!-- 标签中的标签也是要通过标签选择器匹配上 -->
+	<div>我是div标签<span>span标签</span></div>
+</body>
+</html>

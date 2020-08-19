@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	//for循环
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+        document.write("<h1>我爱你祖国</h1>");
+    }
+    // JS中认为声明的变量是全局变量，可以在循环外面使用
+    console.log(i);
+</script>
+<script type="text/javascript">
+	<!-- 计算数字1~100之间的数字累加和 -->
+	// 声明变量保存每次循环计算的结果
+	var sum = 0;
+	for(var i = 1; i <= 100; i++) {
+		sum += i;
+	}
+	console.log(sum);
+</script>
+<script type="text/javascript">
+	<!-- 控制台中输出三位的水仙花数字 -->
+	// 水仙花数字：个位、十位、百位的立方和等于这个数字本身
+	for(var i = 100; i < 1000; i++) {
+		// 分别获取这个数字个、十、百
+		// parseInt取整
+		var ge = i % 10, 
+			shi = parseInt(i / 10) % 10,
+			bai = parseInt(i / 100);
+		// 计算数字累加和
+		var result = Math.pow(ge, 3) + Math.pow(shi, 3) + Math.pow(bai, 3);
+		if(i == result) {
+			console.log(i + "是水仙花数字");
+		}
+	}
+</script>
+<script type="text/javascript">
+	<!-- while练习 -->
+	// 计算数字1~10累加和
+	var i = 11;
+	var sum = 0;
+	while(i--) {
+		sum += i;
+	}
+	console.log(sum);
+</script>
+<script type="text/javascript">
+	<!-- do-while -->
+	// 计算数字1~10累加和
+	var i = 10;
+	var sum = 0;
+	do {
+	  sum += i;				
+	} while(i--);
+	console.log(sum);
+</script>
+<script type="text/javascript">
+	<!-- break-->
+	for(var i = 1; i < 10; i++) {
+		if( i % 2 == 0) break;
+		console.log(i);
+	}
+</script>

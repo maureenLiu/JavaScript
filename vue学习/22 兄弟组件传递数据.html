@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="./lib/vue.min.js"></script>
+	<style type="text/css">
+		#app{
+			width: 80%;
+			height: 600px;
+			background-color: red;
+			border: 2px solid black;
+			margin: 0 auto;
+		}
+		.son {
+			width: 400px;
+			height: 200px;
+			background-color: pink;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 模板 -->
+	<!-- 根组件 -->
+	<div id="app">
+		<son1 class="son"></son1>
+		<son2 class="son"></son2>
+	</div>
+
+	<template id="son1">
+		<div>
+			<h1>大儿子组件</h1>
+			<h3>{{info}}</h3>
+		</div>
+	</template>
+
+	<template id="son2">
+		<div>
+			<h1>小儿子组件---{{car}}</h1>
+			<button @click="sendCar">单击给哥哥送车</button>
+		</div>
+	</template>
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 前端工程师：利用中央管道实现兄弟组件之间传递数据 -->
+	// 就是将Vue实例作为原型对象的属性值
+	Vue.prototype.$bus = new Vue;
+
+	<!-- 兄弟组件传递数据 -->
+	var vm = new Vue({
+		// 挂载点
+		el:"#app",
+		data:{},
+		components: {
+			// 第一个儿子组件
+			son1: {
+				template:"#son1",
+				data() {
+					return {
+						info:''
+					}
+				},
+				// 哥哥组件接收兄弟的数据
+				mounted(){
+					this.$bus.$on("sendCar",($event)=>{
+						this.info = $event;
+					})
+				},
+			},
+			son2: {
+				template:"#son2",
+				data() {
+					return {car:"奔驰"}
+				},
+				methods:{
+					sendCar() {
+						// 小儿子给哥哥传递数据
+						this.$bus.$emit("sendCar", this.car);
+					}
+				}
+			}
+		}
+	});
+</script>

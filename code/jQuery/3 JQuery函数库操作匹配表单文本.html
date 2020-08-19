@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<p>
+		<input type="text" value="我是输入文本的地方">
+	</p>
+	<div>我是一个粉刷匠，粉刷本领强</div>
+</body>
+</html>
+<script>
+    //操作表单元素文本：利用的val方法
+    //获取表单元素文本
+    console.log($("input").val());
+    //重新设置表单元素文本
+    $("input").val("我修改了表单元素文本");
+    /**************************************************************************/
+    //操作非表单元素文本：利用的html方法
+    //获取非表单元素文本
+    console.log($("div").html());
+    $("div").html("修改非表单元素文本啦么么打~~~~")
+</script>

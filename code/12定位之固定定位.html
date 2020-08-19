@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		<!-- 想让页面没有默认样式：带有空格 -->
+		/*清除全部默认样式*/
+		/**代表所有标签*/
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		div{
+			width: 400px;
+			height: 200px;
+		}
+		.box1{
+			background: red;
+		}
+		/*固定网页的高度，就可以上下滑动*/
+		body{
+			height:10000px;
+		}
+		.box2{
+			/*固定定位：固定定位的元素不占起始位置,后面的标签就会上移;如果固定了网页大小，即便滑动网页，位置也是不会变的*/
+			/*固定定位元素的参照物是网页*/
+			position: fixed;
+			left: 500px;
+			top: 200px;
+			background:green;
+		}
+		.box3{
+			background:purple;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+
+</body>
+</html>

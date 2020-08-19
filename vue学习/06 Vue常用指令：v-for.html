@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="./lib/vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+        <h1>非常常用的指令v-for</h1>
+        <h1>循环语句遍历数字</h1>
+        <h2 v-for="item in 2">我是二级标题{{item}}</h2>
+        <h1>循环语句遍历数组</h1>
+        <ul>
+            <li v-for="(item , index) in arr">{{item}}----{{index}}</li>
+        </ul>
+        <table>
+        	<!-- 两重循环 -->
+            <tr v-for="row in 9">
+                <td v-for="col in 9">小明</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+	//创建Vue实例
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            arr: ['吃饭', '睡觉', '打豆豆']
+        }
+    });
+</script>

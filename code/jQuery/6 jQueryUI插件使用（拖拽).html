@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 引入jQuery包 -->
+	<script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入插件 -->
+    <script src="../lib/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div>
+        <p>我是你的孩子~~~要拖拽</p>
+    </div>
+    <ul>
+        <li>吃饭</li>
+        <li>睡觉</li>
+        <li>打豆豆</li>
+        <li>么么打</li>
+    </ul>
+</body>
+</html>
+<script>
+    //拖拽
+    $("div").draggable();
+    //排序拖拽
+    $("ul").sortable();
+</script>

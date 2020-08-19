@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 数学运算符 --数字参与 -->
+	console.log(66+22);
+	console.log(66-33);
+	console.log(6 * 3);
+	console.log(6 / 3);
+	console.log(99 % 3);
+</script>
+<script type="text/javascript">
+	<!-- 数学运算符 --布尔参与 -->
+	// 布尔类型数据也可以参与数学运算，但是系统自动隐式转换为数字参与
+	console.log(Number(true));
+	console.log(Number(false));
+	console.log(true + 99); //100
+	console.log(false * 100);//0
+</script>
+<script type="text/javascript">
+	<!-- 数学运算符 --未定义数据参与 -->
+	// 隐式转换为数字参与
+	// undefined未定义类型数据参与数学运算时会隐式转换为数字NaN
+	// NaN也是数字类型数值：只不过这个数值比较特殊，一般在计算数学运算的时候算不出结果时返回数字NaN
+	console.log(Number(undefined));  //NaN
+	console.log(typeof(NaN));        //number
+	console.log(0 / 0);             //NaN
+	console.log(NaN + 33);          //NaN
+	console.log(undefined + 33);    //NaN
+</script>
+<script type="text/javascript">
+	<!-- 数学运算符 --空对象(null)类型数据参与 -->
+	console.log(Number(null)); //0
+	console.log(null * 99);    //0
+	console.log(null + NaN);   //NaN
+</script>
+<script type="text/javascript">
+	<!-- 数学运算符 --字符串参与 -->
+	// 加号运算符比较特殊，如果加号遇见字符串，就是连字符了
+	console.log("12" + 44);  //1244
+    console.log("张三喜欢李四" + 666); 
+    // 如果减、乘、除、取余数字符串参与：都隐式转换为数字参与。
+    console.log("12" - 44);
+    console.log("12" * 44);
+    console.log("12" / 44);
+	console.log("12" % 44);
+    console.log("小明" / 66);   //NaN
+    console.log("小红红" * "小兰兰");  //NaN
+</script>

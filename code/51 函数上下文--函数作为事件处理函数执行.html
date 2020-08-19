@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+            width:400px;
+            height: 200px;
+            background-color: black;
+       }
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>
+<script>
+	<!-- 2、函数作为事件处理函数执行 -->
+  //获取div标签
+  var div = document.getElementById("box");
+  //绑定单击事件
+  div.onclick = function(){
+     //函数体中上下文为当前触发事件的标签，即div
+     this.style.background = "red"; //this可以换成div
+  }
+</script>

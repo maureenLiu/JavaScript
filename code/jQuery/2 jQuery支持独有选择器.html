@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 通过script标签引入jQuery函数库，又称引包 -->
+	<script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<div>我是中国人</div>
+    <div>我是巴基斯坦人</div>
+    <div>我是泰国人</div>
+    <div>我是日本人</div>
+    <div>我是中国人</div>
+    <div>我是巴基斯坦人</div>
+    <div>我是泰国人</div>
+    <div>我是日本人</div>
+    <div>我是中国人</div>
+    <div>我是巴基斯坦人</div>
+    <div>我是泰国人</div>
+    <div>我是日本人</div>
+    <div>我是中国人</div>
+    <div>我是巴基斯坦人</div>
+    <div>我是泰国人</div>
+    <div>我是日本人</div>
+</body>
+</html>
+<script>
+    //下面这些都是JQ函数库独有选择器
+    //:first,可以获取某一个匹配标签的第一个元素
+    $("div:first").css({
+        "background": "red"
+    });
+    //:last,可以获取到某一个匹配标签最后一个元素
+    $("div:last").css({
+        'background': "cyan"
+    });
+    //:even,代表的是偶数选择器
+    $("div:even").css({
+        'background': "skyblue"
+    });
+    //:odd，代表的是奇数选择器
+    $("div:odd").css({
+        'background': "pink"
+    })
+    //:gt(index)，大于选择器
+    $("div:gt(6)").css({
+        'background': "red"
+    });
+    //:lt(index)小于选择器
+    $("div:lt(6)").css({
+        'color': "yellow"
+    })
+</script>

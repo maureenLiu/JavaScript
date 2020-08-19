@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 通过script标签引入jQuery函数库，又称引包 -->
+	<script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li>吃饭</li>
+		<li>睡觉</li>
+		<li>打豆豆</li>
+	</ul>
+	<div id="box">
+		断桥残雪
+	</div>
+	<p class="cur">
+		杭州西湖
+	</p>
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 第一：JQ函数经常用来操作节点树上的标签 -->
+	// 支持之前学过的选择器：标签选择器、ID选择器、class选择器
+	// 注意1：当程序中引入JQ，这个函数库对外暴露了一个￥函数，它是JQ函数库的一个核心函数，经常用来匹配标签
+	console.log($);
+	// 通过标签选择器匹配li标签
+	console.log($("li"));
+	// 通过id选择器匹配div标签
+	console.log($("#box"));
+	// 通过类选择器匹配p标签
+	console.log($(".cur")); 
+	// 如果想设置匹配标签的行内样式可以连续打点css函数
+	$("p").css({
+        "color": "red",
+        "fontSize": 30,
+        "background": "cyan",
+        "textAlign": "center"
+    })
+</script>
+

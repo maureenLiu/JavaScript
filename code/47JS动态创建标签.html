@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id="box"></ul>
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 动态创建li标签 -->
+    //先获取UL标签
+    var ul = document.getElementById("box");
+    //DOM提供给我们一个createElement方法，可以在JS当中动态创建标签
+    //循环语句创建10000个li
+    for (var i = 0; i < 10000; i++) {
+        var li = document.createElement("li");
+        li.innerHTML = i;
+        //UL追加子元素
+        ul.appendChild(li);
+    }
+</script>

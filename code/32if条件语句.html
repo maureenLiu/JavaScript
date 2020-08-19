@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 条件语句的基本使用 -->
+	if(true)  alert("haha");
+	if(false) alert(1111);
+	// 其他类型数据也可以作为条件语句条件：
+	if(6666) alert(123);
+	if(NaN) console.log("不能执行");
+</script>
+<script type="text/javascript">
+	<!-- 关键字if和else结合使用 -->
+	// 关键字else，可以结合if条件一起使用，else是对上面的条件进行否定
+	// 例子: 用户输入䘝分数对应弹出这个学生是否及格
+	var score = prompt("请输入分数");
+	if(score >= 60) alert("恭喜及格");
+	else alert("不及格");
+</script>
+<script type="text/javascript">
+	<!-- if条件语句多分支 -->
+	// 用户输入的分数
+	var score = prompt();
+	// 不及格
+	if(score < 60) alert("来年补考！");
+	else if(score < 70) {
+		// 暗含条件是分数>=60
+		alert("及格");
+	} else if (score < 80) {
+		// 暗含条件分数>=70
+		alert("良好");
+	} else {
+		alert("优秀");
+	}
+</script>
+<script type="text/javascript">
+	<!-- 嵌套使用 -->
+	var age = 88;
+    var sex = "男";
+    if (sex == "女") {
+
+    } else {
+        if (age > 60) {
+            alert(123);//弹出结果
+        } else {
+            alert(456);
+        }
+    }
+</script>

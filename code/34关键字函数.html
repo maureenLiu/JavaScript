@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	//关键字形式函数分为两部分：声明+调用
+    //声明部分(函数名字务必符合命名标识符规范)
+    function fun() {
+        //这里面是书写代码地方(函数体)
+        console.log("鹅鹅鹅,去向向天歌");
+        console.log("白毛浮绿水,红掌拨清波");
+    }
+    //函数调用部分
+    fun();
+    fun();
+    fun();
+</script>
+<script type="text/javascript">
+	 //形参【形式参数】和实参【实际参数】
+    //计算两个变量之和
+    //a、b所谓形参
+    function sum(a, b) {
+        console.log(a + b);
+    }
+    //100、200实参
+    sum(100, 200);
+    sum("张三", "李四");
+</script>
+<script type="text/javascript">
+	//局部变量：函数形参、在函数体中声明变量（只能在函数体中使用）
+    //声明部分
+    function fun(a, b) {
+        //形参a、形参b称之为局部变量
+        console.log(a);
+        console.log(b);
+        //在函数体中声明变量（局部变量）
+        var c = "么么哒";
+    }
+    //调用
+    fun(true, "我是祖国的老花骨朵");
+    // c是不能在函数体外使用的
+    // console.log(c);
+</script>
+<script type="text/javascript">
+	<!-- 局部变量和全局变量的区别 -->
+	//当前变量i全局变量（可以在JS行为层中任意地方使用）
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
+    console.log("循环语句结束" + i);
+
+    //当前变量str：既不是形参、也不是函数体中声明变量，因此是全局变量
+    if (true) {
+        var str = "我是全局还是局部呀";
+    }
+    console.log(str);
+
+    //判断下面变量是全局还是局部
+    // a是全局变量
+    var a = 100;
+    /*****************************************************************************/
+    // haha和hehe变量都是局部变量
+    function fun(haha, hehe) {
+        console.log(haha, hehe);
+
+        //num这个变量是局部变量
+        for (var num = 1; num < 5; num++) {
+            console.log(num);
+        }
+    }
+    //调用函数
+    fun(1, 2);
+    // 局部变量不能在函数体外使用
+    // console.log(haha);
+</script>

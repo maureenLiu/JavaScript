@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 引入Vue源码（引包） -->
+	<script type="text/javascript" src="./lib/vue.min.js"></script>
+</head>
+<body>
+	<!-- 页面标签布局 -->
+	<div id="app">
+		<h1>我是小明，今年{{age}}岁</h1>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	<!-- Vue框架对外暴露了一个Vue构造函数 -->
+	// console.log(Vue);
+	//通过Vue构造函数创建Vue类实例
+	var vm = new Vue({
+		// 挂载点：将Vue实例和结构层中的标签(div)进行联系
+		el:"#app",
+		// Vue实例数据来源
+		data: {
+			age:18
+		}
+	});
+	// 修改实例age属性值
+	vm.age = 23;
+	console.log(vm);
+</script>

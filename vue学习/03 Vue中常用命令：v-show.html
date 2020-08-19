@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="./lib/vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+        <ul>
+            <li>吃饭</li>
+            <!-- 隐藏睡觉选项 -->
+            <!-- <li v-show='false'>睡觉</li> -->
+            <li v-show='3 > 8'>睡觉</li>
+            <li>打豆豆</li>
+        </ul>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+	<!-- 创建实例 -->
+	var vm  = new Vue({
+		el:"#app"
+	});
+</script>

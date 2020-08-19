@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- 使用JQ，必须要引包 -->
+	<script type="text/javascript" src="./lib/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Ajax技术</h1>
+	<button>单击我向服务器端悄悄发送上行请求GET</button>
+	<button>单击我向服务器端悄悄发送上行请求POST</button>
+	<button>单击我向服务器端发起上行请求</button>
+</body>
+</html>
+
+<script type="text/javascript">
+	<!-- 给按钮绑定单击事件 -->
+	$("button:eq(0)").click(function() {
+		// 向服务器端悄悄地发起上行请求GET，拉取服务器数据
+		// 第一个参数：向服务器请求path
+		// 第二个参数：客户端向服务器额外传送一些数据，可有可无
+		// 第三个参数：当服务器响应数据成功的时候会立即执行一次
+		$.get("./data.txt",{
+			"name":"小明",
+			'ps':123
+		},function(data) {
+			// 实现了在页面没有重新加载的情况下，局部更新
+			// data就是服务器端响应的数据
+			// alert(data);
+			// 修改H1标题为data.txt中的文本
+			$("h1").html(data);
+		});
+	});
+	// 第二个按钮发起POST请求
+	$("button:eq(1)").click(function() {
+		// 向服务器端悄悄地发起上行请求POST，拉取服务器数据
+		// 第二个参数可以不用，也不用花括号
+		$.post("./data.txt",function(data){
+			// 页面没有重新加载的情况下，实现局部更新
+			$("h1").html(data);
+		})
+	});
+
+	// 第三个按钮
+	$("button:eq(2)").click(function() {
+		//向服务器端发起POST请求
+        //当前这个方法可以发起GET、POST，请求参数配置务必是一个JSON数据格式
+		$.ajax({
+			// 请求网址
+            "url": "./data.txt",
+            //请求方式既可以GET、POST
+            "type": "post",
+            //给服务器额外传递数据
+            "data": {
+                "a": 1
+            },
+            //回调函数：可以接收服务器数据
+            "succ ess": function (data) {
+                //当服务器响应成功的时候会立即执行一次
+                $("h1").html(data);
+            }
+		})
+	});
+</script>

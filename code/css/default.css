@@ -1,0 +1,11 @@
+/*创建css文件夹，新建一个default.css文件，可以在其中书写你的样式*/
+.box{
+	width: 280px;
+	height: 280px;
+	background: red;
+}
+#cur{
+	font-size: 20px;
+	color: green;
+	text-align: center;
+}
